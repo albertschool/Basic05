@@ -37,6 +37,7 @@ class Flag {
 + void howToColor()
 }
 
+
 Shape <|-- Circle
 Circle <|-- Arch
 Colorable <|.. Rectangle
