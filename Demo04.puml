@@ -1,0 +1,12 @@
+@startuml
+class Flag {
+- Rectangle flag
+- ArrayList<String> colors
++ void howToColor()
+}
+
+
+
+
+Colorable <|.. Flag
+@enduml

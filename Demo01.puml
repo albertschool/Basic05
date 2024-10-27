@@ -1,0 +1,29 @@
+@startuml
+abstract class Shape {
++ {abstract}double calculateArea()
++ {abstract}double calculatePerimeter()
+}
+
+class Main {
+}
+
+class Circle {
+- double radius
++ double calculateArea()
++ double calculatePerimeter()
+}
+
+
+class Rectangle {
+- double width
+- double height
++ double calculateArea()
++ double calculatePerimeter()
+}
+
+
+
+
+Shape <|-- Circle
+Shape <|-- Rectangle
+@enduml

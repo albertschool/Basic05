@@ -1,0 +1,46 @@
+@startuml
+interface Colorable {
++ void howToColor()
+}
+
+abstract class Shape {
++ {abstract}double calculateArea()
++ {abstract}double calculatePerimeter()
+}
+
+class Main {
+}
+
+class Circle {
+- double radius
++ double calculateArea()
++ double calculatePerimeter()
+}
+
+class Arch {
+- double angle
++ double calculateArea()
++ double calculatePerimeter()
+}
+
+class Rectangle {
+- double width
+- double height
++ double calculateArea()
++ double calculatePerimeter()
++ void howToColor()
+}
+
+class Flag {
+- Rectangle flag
+- ArrayList<String> colors
++ void howToColor()
+}
+
+Shape <|-- Circle
+Circle <|-- Arch
+Colorable <|.. Rectangle
+Flag *-- Rectangle
+Colorable <|.. Flag
+Shape <|-- Rectangle
+@enduml
